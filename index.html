@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pig Game</title>
+  </head>
+  <body>
+    
+     
+
+    <main>
+      <section class="player player--0 player--active">
+        <h2 class="name" id="name--0">Player1</h2>
+        <p class=" score" id="score--0">0</p>
+        <div class ="current">
+          <p class ="current-label">current</p>
+          <p class ="current-score" id ="current--0"> </p>
+
+        </div>
+
+      </section>
+      <section class="player player--1">
+        <h2 class="name" id="name--1">Player2</h2>
+        <p class="score" id="score--1">0</p>
+        <div class ="current">
+          <p class ="current-label">current</p>
+          <p class ="current-score" id ="current--1"> </p>
+
+        </div>
+     
+
+
+      
+      <img src="dice-5.png" alt="playing dice" class="dice"/> 
+    <button class="btn btn--new">😃 New game</button>
+     <button class="btn btn--roll">👍Roll dice</button> 
+      <button class="btn btn--hold">✋Hold back</button> 
+     
+    </main> 
+    <script src="script.js"></script> 
+    <script>
+      var para;
+      var rannum;
+      function clickevent(){
+      rannum = Math.floor(Math.random() * 6) + 1;
+      para = document.getElementById("demo");
+      
+      para.innerHTML = rannum;
+
+      if(rannum==1){
+          document.getElementById("myImg").src = "dice-1.png";
+      }
+      if(rannum==2){
+          document.getElementById("myImg").src = "dice-2.png";
+      }
+      if(rannum==3){
+          document.getElementById("myImg").src = "dice-3.png";
+      }
+      if(rannum==4){
+          document.getElementById("myImg").src = "dice-4.png";
+      }
+      if(rannum==5){
+          document.getElementById("myImg").src = "dice-5.png";
+      }
+      if(rannum==6){
+          document.getElementById("myImg").src = "dice-6.png";
+      }
+  }
+  </script>
+  </body>
+</html>
